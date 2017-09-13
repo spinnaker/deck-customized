@@ -48,7 +48,7 @@ function configure(IS_TEST) {
           include: inclusionPattern.concat(path.join(__dirname, 'test'))},
         {
           test: /\.js$/,
-          use: [ 'cache-loader', 'angular-loader', 'babel-loader', 'eslint-loader' ],
+          use: [ 'cache-loader', 'babel-loader', 'eslint-loader' ],
           include: inclusionPattern.concat(path.resolve(__dirname, 'settings.js'))
         },
         {
