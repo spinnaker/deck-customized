@@ -15,12 +15,26 @@ This customization replaces the main Spinnaker header with your own custom heade
 ### Cloud provider override
 
 This customization replaces specific cloud provider templates with your own custom template.
-The provided example customizes the AWS servergroup and instance details pane.
+The provided example customizes the AWS server group and instance details pane.
 
 ### Custom Data Source
 
 This adds a custom data source to Spinnaker, which shows up as a separate tab for an application.
 The custom data source pulls Spinnaker repositories from Github and participates in the application data refresh lifecycle.
+
+### Custom Help Contents
+
+The help contents on the Clusters page header is overridden.
+
+### Home Page
+
+The home page has been slightly altered
+
+### Custom Exception Handler
+
+A custom exception handler is stubbed in to show how you can propagate exceptions to an external service.
+
+You can test it out (if you're running AWS) by selecting a server group, then choosing "Throw an exception" from the Server Group Actions menu.
 
 ## Prerequisites
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-app="netflix.spinnaker">
+<html class="no-js" ng-app="acme.spinnaker">
 <head>
   <title>Spinnaker</title>
   <meta charset="utf-8">
@@ -40,8 +40,8 @@
       color: #333333;
     }
 
-    .loading-placeholder h1, .loading-placeholder h2 {
-      font-family: "Helvetic Neue", Helvetica, Arial, sans-serif;
+    .loading-placeholder h1, .loading-placeholder h2, .loading-placeholder h3 {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 300;
       margin: 10px 0;
       font-size: 30px;
@@ -49,6 +49,13 @@
       position: relative;
       top: 0;
       animation: fade-in 0.5s steps(30) 1;
+    }
+    .loading-placeholder h3 {
+      position: fixed;
+      bottom: 10px;
+      top: unset;
+      width: 100%;
+      font-size: 12px;
     }
 
     .loading-placeholder svg {
@@ -91,35 +98,29 @@
     <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_2_)" d="M60.99,213.809c63.75,2.367,112.338-38.172,124.042-54.975
       c11.707-16.803-6.217-92.497-6.217-92.497C161.097,118.769,111.77,195.18,60.99,213.809L60.99,213.809z"/>
     </svg>
-    <h1 id="welcome-message" ng-if="!authenticating">Hello!</h1>
-    <h1 style="display: none" ng-style="{display: authenticating ? '' : 'none'}">Authenticating...</h1>
+    <h1 id="welcome-message">Welcome to ACME Deploy!</h1>
+    <h2>From ACME, makers of <span id="acme-product"></span></h2>
+    <h3>Powered by Spinnaker</h3>
   </div>
 
-  <!-- Replaces "Welcome!" message periodically with a random quote -->
   <script>
     (function() {
       var messageOptions = [
-          'If I\'m not back in five minutes... just wait longer.', // Ace Ventura: Pet Detective
-          'And that\'s why you always leave a note.', // Arrested Development
-          'Jim never has a second cup of coffee at home.', // Airplane!
-          'This is WZAZ in Chicago, where disco lives forever.', // Airplane!
-          'Carpe dentum. Seize the teeth.', // Mrs. Doubtfire
-          'Ah! Norman Bates!', // Airplane! (it was a really good movie)
-          'I am the walrus.', // The Big Lebowski
-          'And a good day to you, sir!', // The Big Lebowski (also a really good movie)
-          'Do you want ants? Because that\'s how you get ants!', // Archer
-          'Kids you can literally fly!', // Key and Peele
-          'Goats are the only animals with an innate sense of democracy. That\'s why they\'re called "Nature\'s President".',
-          'Goats are stupid, mean, and hardheaded animals. That\'s why they\'re called "Nature\'s President".', // Mr. Show
-          'I\'d like to add you to my professional network',
-          'Reticulating splines', // Simcity 2000
-          'They mostly come at night. Mostly.' // Aliens
+          'Earthquake Pills',
+          'Dehydrated Boulders',
+          'The Original Jet-Propelled Unicycle',
+          'The Do-It Yourself Tornado Kit',
+          'Instant Feathers',
+          'Iron Bird Seed',
+          'Roller Skis',
+          'The Time-Space Gun',
+          'The Female Road Runner Costume',
+          'The Clue Collector',
+          'Anvils'
       ];
 
-      if (Math.random() < 0.02) {
-        var idx = Math.floor(Math.random() * messageOptions.length);
-        document.querySelector('#welcome-message').innerHTML = messageOptions[idx];
-      }
+      var idx = Math.floor(Math.random() * messageOptions.length);
+      document.querySelector('#acme-product').innerHTML = messageOptions[idx];
     })();
   </script>
 
