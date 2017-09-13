@@ -3,7 +3,7 @@ import {
   Application, APPLICATION_DATA_SOURCE_REGISTRY, ApplicationDataSourceRegistry, DataSourceConfig
 } from '@spinnaker/core';
 
-export const ACME_REPOS_DATASOURCE = 'spinnaker.acme.datasoure.custom';
+export const ACME_REPOS_DATASOURCE = 'spinnaker.acme.datasource.custom';
 const ngmodule = module(ACME_REPOS_DATASOURCE, [APPLICATION_DATA_SOURCE_REGISTRY]);
 ngmodule.run((
   $q: IQService,

@@ -5,7 +5,7 @@ import { AMAZON_MODULE } from '@spinnaker/amazon';
 import { GOOGLE_MODULE } from '@spinnaker/google';
 import { ACME_MODULE } from './acme/acme.module';
 
-module('netflix.spinnaker', [
+module('acme.spinnaker', [
   CORE_MODULE,
   AMAZON_MODULE,
   GOOGLE_MODULE,

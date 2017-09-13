@@ -63,7 +63,7 @@
             </li>
             <li><a href ng-click="ctrl.destroyServerGroup()">Destroy</a></li>
             <li><a href ng-click="ctrl.cloneServerGroup(ctrl.serverGroup)">Clone</a></li>
-            <li><migrator application="ctrl.application" server-group="ctrl.serverGroup"></migrator></li>
+            <li><a href ng-click="ctrl.applyAccountDetails()">Throw an exception</a></li>
             <render-if-feature feature="entityTags">
               <add-entity-tag-links component="ctrl.serverGroup"
                                     application="ctrl.application"
