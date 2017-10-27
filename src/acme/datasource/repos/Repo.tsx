@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IHttpService } from 'angular';
-import autoBindMethods from 'class-autobind-decorator';
+import { BindAll } from 'lodash-decorators';
 import { Application } from '@spinnaker/core';
 import { Transition } from '@uirouter/core';
 
@@ -14,7 +14,7 @@ interface IRepoState {
   repodata: any;
 }
 
-@autoBindMethods
+@BindAll()
 export class Repo extends React.Component<IRepoProps, IRepoState> {
   private $http: IHttpService;
 

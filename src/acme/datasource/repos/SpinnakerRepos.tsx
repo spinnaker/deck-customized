@@ -1,6 +1,7 @@
 import * as React from 'react';
-import autoBindMethods from 'class-autobind-decorator';
 import { UISref, UISrefActive, UIView } from '@uirouter/react';
+import { BindAll } from 'lodash-decorators';
+
 import { Application, ApplicationDataSource } from '@spinnaker/core';
 
 interface ISpinnakerReposProps {
@@ -11,7 +12,7 @@ interface ISpinnakerReposState {
   repos: any[];
 }
 
-@autoBindMethods
+@BindAll()
 export class SpinnakerRepos extends React.Component<ISpinnakerReposProps, ISpinnakerReposState> {
   private dataSource: ApplicationDataSource;
   private unsubscribe: Function;

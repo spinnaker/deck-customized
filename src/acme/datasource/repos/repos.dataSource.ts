@@ -32,7 +32,6 @@ ngmodule.run((
     description: 'A custom data source fetching Spinnaker repos as out-of-band data',
     key: 'repos',
     sref: '.repos',
-    title: 'Spinnaker Repos',
     label: 'Spinnaker Repos',
     icon: 'bar-chart'
   }));
