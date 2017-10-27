@@ -13,6 +13,7 @@ const inclusionPattern = [
 function configure(IS_TEST) {
 
   const config = {
+    stats: 'errors-only',
     output: IS_TEST ? undefined : {
       path: path.join(__dirname, 'build', 'webpack', process.env.SPINNAKER_ENV || ''),
       filename: '[name].js',
@@ -68,10 +69,11 @@ function configure(IS_TEST) {
         }
       ],
     },
-    devServer: IS_TEST ? {} : {
+    devServer: IS_TEST ? { stats: 'errors-only' } : {
       port: process.env.DECK_PORT || 9000,
       host: process.env.DECK_HOST || 'localhost',
-      https: process.env.DECK_HTTPS === 'true'
+      https: process.env.DECK_HTTPS === 'true',
+      stats: 'errors-only',
     },
     watch: IS_TEST,
     externals: {
