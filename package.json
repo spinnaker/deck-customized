@@ -50,7 +50,6 @@
     "dompurify": "^0.8.5",
     "font-awesome": "^4.7.0",
     "fork-ts-checker-webpack-plugin": "^0.2.8",
-    "formsy-react": "^0.19.2",
     "jasmine": "^2.6.0",
     "jquery": "2.1.4",
     "jquery-textcomplete": "1.6.1",
